@@ -1,0 +1,108 @@
+﻿@model IEnumerable<MVC_Application_1.Models.Outfit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<h2>Index</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title"><span>Create Random Outfit</span></div>
+                </div>
+                <div class="panel-body" style="background-color:lightgray">
+                    <button id="genBtn" class="btn btn-success">Generate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Top)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bottom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeadDress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Socks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Belt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shoes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Glasses)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Top)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Bottom)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HeadDress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Socks)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Belt)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Shoes)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Glasses)
+    </td>
+    @*<td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.StudentId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.StudentId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.StudentId })
+    </td>*@
+</tr>
+    }
+
+</table>
+
+
+<main class="grid-item main">
+    <div class="items">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4"></div>
+        <div class="item item5"></div>
+        <div class="item item6"></div>
+        <div class="item item7"></div>
+        <div class="item item8"></div>
+        <div class="item item9"></div>
+        <div class="item item10"></div>
+    </div>
+</main>
+
+@Scripts.Render("~/bundles/quikfit")
+
+
+
+
+
